@@ -33,11 +33,56 @@
         color: rgba(181, 53, 53, 0.39); /* Change the hover color as desired */
             /* Add any other CSS properties for the hover effect */
             }
+
             .center-vertically {
             display: flex;
             align-items: center;
             }
+
+
+            .nav-pills .nav-link.active,
+            .nav-pills .show >.nav-link{
+              background-color: #FF0000; /* Set the background color for the active pill */
+              color: #FFFFFF; /* Set the text color for the active pill */
+            }
+
+            .nav-pills .nav-link {
+              background-color: #CCCCCC; /* Set the background color for the inactive pills */
+              color: #000000; /* Set the text color for the inactive pills */
+              margin-right: 10px; /* Set the right margin to create space between the links */
+            }
+
+            .nav-container {
+  overflow-x: scroll; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent line breaks */
+  -ms-overflow-style: none; /* Remove scrollbar in Microsoft browsers */
+  scrollbar-width: none; /* Remove scroll bar */
+  scroll-behavior: smooth; /* Enable smooth scrolling */
+}
+
+.nav-wrapper {
+  display: inline-block; /* Allow the wrapper to shrink to content width */
+}
+
+.nav {
+  display: flex; /* Display items in a row */
+  width: max-content; /* Set width to the content's width */
+}
+
+/* For Firefox */
+.nav-container::-webkit-scrollbar {
+  display: none; /* Remove scrollbar in WebKit browsers */
+}
+
         </style>
+        <script>
+          function scrollHorizontally(event) {
+                            const delta = Math.max(-1, Math.min(1, (event.wheelDelta || -event.detail)));
+                            const scrollContainer = event.currentTarget;
+                            scrollContainer.scrollLeft -= delta * 300; // Adjust the scrolling speed as needed
+                            event.preventDefault();
+                          }
+        </script>
   </head>
   <body>
     
@@ -61,6 +106,38 @@
           </ul>
         </div>
       </nav>
+      
+      <div class="nav-container" onwheel="scrollHorizontally(event)">
+        <div class="nav-wrapper">
+          <nav class="nav nav-pills nav-fill">
+        <a class="nav-link active" aria-current="page" href="#">BGMI</a>
+        <a class="nav-link" href="#">CALL OF DUTY</a>
+        <a class="nav-link" href="#">FREEFIRE</a>
+        <a class="nav-link" href="#">GTA 5</a>
+        <a class="nav-link" href="#">CALL OF DUTY</a>
+        <a class="nav-link" href="#">FREEFIRE</a>
+        <a class="nav-link" href="#">GTA 5</a>
+        <a class="nav-link" href="#">CALL OF DUTY</a>
+        <a class="nav-link" href="#">FREEFIRE</a>
+        <a class="nav-link" href="#">GTA 5</a>
+        <a class="nav-link" href="#">CALL OF DUTY</a>
+        <a class="nav-link" href="#">FREEFIRE</a>
+        <a class="nav-link" href="#">GTA 5</a>
+        <a class="nav-link" href="#">CALL OF DUTY</a>
+        <a class="nav-link" href="#">FREEFIRE</a>
+        <a class="nav-link" href="#">GTA 5</a>
+        <a class="nav-link" href="#">CALL OF DUTY</a>
+        <a class="nav-link" href="#">FREEFIRE</a>
+        <a class="nav-link" href="#">GTA 5</a>
+        <a class="nav-link" href="#">CALL OF DUTY</a>
+        <a class="nav-link" href="#">FREEFIRE</a>
+        <a class="nav-link" href="#">GTA 5</a>
+        <a class="nav-link" href="#">CALL OF DUTY</a>
+        <a class="nav-link" href="#">FREEFIRE</a>
+        <a class="nav-link" href="#">GTA 5</a>
+      </nav>
+</div></div>
+      
       
           <footer class="footer">
             <a href="" class="Contact">Contact Us</a>
